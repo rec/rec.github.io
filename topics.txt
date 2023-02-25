@@ -1,0 +1,118 @@
+Precursors:
+
+* Set up sponsorship pages and levels and add some PR
+* Come up with boilerplate page
+* list "primary projects"
+* Add sponsorship information to each primary project
+* Set up blog template, design, images, comments!
+* Figure out how to develop essays on a private branch
+* Write 8-12 essays not including Hello.
+
+* Set up a release schedule with specific times
+* Create a list of outlet to publish to and times to publish it.
+
+-------
+
+* Python (19)
+  * In praise of lazy imports - but not in the language (5)
+  * How to build a list by multiplying by 1. 3
+  * Contexts are decorators but not vice versa 3
+  * Composed comprehensions: many little one-line loops. 3
+
+  * Why I don't blacken (but appreciate those who do)
+  * Why I don't mypy (but appreciate those who do)
+  * I and the walrus 8
+  * Hidden: you already have most of the Python source code (8)
+
+  * Set is underused
+  * Why I write everything in 79 columns
+  * Virtual environments are the only way.
+  * Pure poetry
+
+  * openpy
+  * careful with cache
+  * https://docs.python.org/ and me
+  * never, ever use `import *`
+
+  * Series - Python: My golden hammers
+    * dataclasses and datacls
+    * cached_property and dataclasses (and cache)
+    * typer and dtyper
+    * a little itertools
+
+* Git (7)
+  * In praise of anonymous commits
+  * You got got by git: by the time your work is in git, it is too late for trial and error with git
+  * Commit is the new save
+  * Universal git - why git's data model is a game changer
+
+  * Git atom bombs: fix many fuckups
+  * Cutting edge git - staying close to HEAD
+  * ?
+
+* Fundamentals (22)
+  * Hello (not counted)
+
+  * DRY3: Duplication is far cheaper than the wrong abstraction.
+  * How to ask a question 10
+  * How to diagnose a problem 10
+  * How to read (Python) error messages 8
+
+  * Needless elses.
+  * How to get ahead through evil. Worst practices and how to use them
+  * The principle of least surprise
+  * Bad breaks
+
+  * feature flags 7
+  * On typing and your hands 10
+  * Data only exists if it exists in three places (10)
+  * I did something I never expected to and then I did it again (8)
+
+  * Big O, fast and slow
+  * Basics vs fundamentals
+  * Proactivity! (on error handling) 8
+
+  * Series: practically perfect programming
+    * There is no substitute for perfect understanding  10
+    * Beautiful boredom
+    * The perfect game
+    * Katas and perfection
+
+    * Continuous refactoring
+
+  * Series: Hashing is magic (... but there are no miracles)
+    * Hashing
+    * One way functions
+
+  * Series: 90% crap - the programs we use every day
+    * The computer
+    * The browser
+    * The program
+
+* Showcase (17)
+  * tdir
+  * safer
+  * impall
+  * xmod
+
+  * datacls
+  * dek
+  * sproc
+
+  * nmr
+  * dtyper
+  * wavemap
+  * plur
+
+  * vl8
+  * editor
+  * def_main
+  * nc
+
+  * gitz
+    * git-new
+    * git-permute
+    * git-copy, git-rename, git-delete
+
+
+total = 19 + 7 + 22 + 17 = 62
