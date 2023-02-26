@@ -1,18 +1,3 @@
-Precursors:
-
-* Set up sponsorship pages and levels and add some PR
-* Come up with boilerplate page
-* list "primary projects"
-* Add sponsorship information to each primary project
-* Set up blog template, design, images, comments!
-* Figure out how to develop essays on a private branch
-* Write 8-12 essays not including Hello.
-
-* Set up a release schedule with specific times
-* Create a list of outlet to publish to and times to publish it.
-
--------
-
 * Python (19)
   * In praise of lazy imports - but not in the language (5)
   * How to build a list by multiplying by 1. 3
