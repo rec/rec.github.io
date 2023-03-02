@@ -1,5 +1,4 @@
 Title: Data does not exist unless it exists in three places
-Date: 2023-03-14 00:00
 
 ## Avoid screaming!
 
