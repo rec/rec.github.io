@@ -50,7 +50,7 @@
 
   * feature flags 7
   * On typing and your hands 10
-  * Data only exists if it exists in three places (10)
+  X Data only exists if it exists in three places (10)
   * I did something I never expected to and then I did it again (8)
 
   * Big O, fast and slow
@@ -60,7 +60,7 @@
   * Series: practically perfect programming
     * There is no substitute for perfect understanding  10
     * Beautiful boredom
-    * The perfect game
+    * The perfection game
     * Katas and perfection
 
     * Continuous refactoring
