@@ -88,4 +88,7 @@ create one commit per file that has changed.
 
 At the end, I make a lot of use of `git rebase -i`, and also my own
 [`git-permute`](https://github.com/rec/gitz/blob/main/doc/git-permute.rst),
-another gitz script that is not, perhaps, for the faint of heart.
+another gitz extension, probably not for the faint of heart, that lets you permute
+and delete commits, so for example, `git permute dca` takes the last four
+commits, removes the second most recent commit and reverses the order of the
+other three.
