@@ -6,6 +6,7 @@
         <meta name="generator" content="Pelican" />
         <title>Commit is the new save</title>
         <link rel="stylesheet" href="https://rec.github.io/theme/css/main.css" />
+        <meta name="description" content="[Data does not exist unless it exists in three places.](data-does-not-exist-unless-it-exists-in-three-places.html) And if you wipe out even half..." />
 </head>
 
 <body id="index" class="home">
@@ -25,12 +26,12 @@
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2023-03-02T16:32:57.063485+01:00">
-                Published: Thu 02 Mar 2023, 16:32 CET
+        <abbr class="published" title="2023-03-03T13:13:10.737322+01:00">
+                Published: Fri 03 Mar 2023, 13:13 CET
         </abbr>
 		<br />
-        <abbr class="modified" title="2023-03-02T16:32:57.063485+01:00">
-                Updated: Thu 02 Mar 2023, 16:32 CET
+        <abbr class="modified" title="2023-03-03T13:13:10.737322+01:00">
+                Updated: Fri 03 Mar 2023, 13:13 CET
         </abbr>
 
         <address class="vcard author">
@@ -38,7 +39,84 @@
         </address>
 <p>In <a href="https://rec.github.io/category/git.html">Git</a>.</p>
 
-</footer><!-- /.post-info -->      
+</footer><!-- /.post-info -->      <h2>[Data does not exist unless it exists in&nbsp;three</h2>
+<p>places.](data-does-not-exist-unless-it-exists-in-three-places.html)</p>
+<p>And if you wipe out even half an hour&#8217;s work on one file, the result is more
+than a half an hour lost, due to loss of flow and momentum and&nbsp;energy.</p>
+<p>There is also the end-of-session slip, which is well-known in more athletic
+fields like rock climbing - errors are more common at the end of a programming
+session because you are tired and pushing to clean&nbsp;up.</p>
+<p>And the complementary start-of-session confusion, when you don&#8217;t remember
+where you left&nbsp;off.</p>
+<p>Or you get everything working, and then you decide you need to make a clean-up
+change, and then it stops working, and you can&#8217;t get it working again, and you
+haven&#8217;t committed in two hours, and you just want to go&nbsp;home&#8230;</p>
+<p>Or you might get called up on a great adventure in exotic lands, and have to
+leave your computer behind with no warning.  It happens all the&nbsp;time.</p>
+<h2>Commit is the new&nbsp;save.</h2>
+<ul>
+<li>Work on a separate&nbsp;branch</li>
+<li>Push new commits to a remote almost&nbsp;continuously</li>
+<li>Squash and rebase down into a few carefully named commits at the&nbsp;end</li>
+</ul>
+<p>Having your tiny steps saved fixes the &#8220;half an hour lost&#8221; and &#8220;got it working
+then broke it&#8221; and &#8220;dragonslayer&#8221;&nbsp;scenarios.</p>
+<p><span class="dquo">&#8220;</span>In the morning&#8221;, when you start a new programming session, you look back at the
+last few commits you wrote before you left off, which should be small and only
+touch one or two files. You can both see what you did at the end, and if it was
+bad, quickly rebase it out of existence before anyone&nbsp;notices.</p>
+<p>As a bonus, in the &#8220;then broke it&#8221; scenario, you can possibly use <code>git bisect</code>
+to track down the error&nbsp;automatically.</p>
+<h2>How does it&nbsp;work?</h2>
+<p>Top-level view - for every feature, sketch, or&nbsp;idea:</p>
+<ul>
+<li>Create a brand-new branch and push it to a&nbsp;remote</li>
+<li>Any time you do any work, commit and push<ul>
+<li>It&#8217;s nice if none of these commit points breaks your unit tests, but not&nbsp;necessary</li>
+</ul>
+</li>
+<li>Continue working until coding is&nbsp;done</li>
+<li>Rebase commits into final&nbsp;form</li>
+<li>Start a code&nbsp;review</li>
+</ul>
+<p>During review, the same idea holds:
+* Start from the commits the reviewers saw
+* Then work as usual with tiny commits
+* Rebase those commits into
+<a href="https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html">fixup</a>
+commits
+* Iterate until the reviewers are satisfied
+* Then rebase will automatically fold in the fixup&nbsp;commits</p>
+<h2>Details</h2>
+<p>You need each action in this workflow to be as simple as possible so
+you stop for a sip of coffee and just naturally save, commit and&nbsp;push.</p>
+<p>I have a set of git extensions called <a href="https://github.com/rec/gitz"><code>gitz</code></a>
+written in Python that I use for these purposes, and you can too, but you can do
+much the same with aliases or bash&nbsp;scripts.</p>
+<p>I start with a new branch which I can push to using
+<a href="https://github.com/rec/gitz/blob/main/doc/git-new.rst"><code>git-new</code></a>.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>new<span class="w"> </span>tweak-search
+</code></pre></div>
+
+<p>If you don&#8217;t have <code>git-new</code>, you&#8217;ll do something like this, (assuming you are
+working with other people on a remote called <code>upstream</code> against a branch called
+<code>main</code>, and your own remote is called <code>origin</code>)</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>fetch<span class="w"> </span>upstream
+$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-B<span class="w"> </span>tweak-search
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>tweak-search
+</code></pre></div>
+
+<p>Now I make some changes and use either
+<a href="https://github.com/rec/gitz/blob/main/doc/git-infer.rst"><code>git-infer</code></a> to
+create a single commit with a vaguely descriptive name, or
+<a href="https://github.com/rec/gitz/blob/main/doc/git-split.rst"><code>git-split</code></a> to
+create one commit per file that has&nbsp;changed.</p>
+<p>At the end, I make a lot of use of <code>git rebase -i</code>, and also my own
+<a href="https://github.com/rec/gitz/blob/main/doc/git-permute.rst"><code>git-permute</code></a>,
+another gitz extension, probably not for the faint of heart, that lets you permute
+and delete commits, so for example, <code>git permute dca</code> takes the last four
+commits, removes the second most recent commit and reverses the order of the
+other&nbsp;three.</p>
     </div><!-- /.entry-content -->
 
   </article>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+        <title>You got got by Git!, or, why you need a Git sandbox</title>
+        <link rel="stylesheet" href="https://rec.github.io/theme/css/main.css" />
+        <meta name="description" content="Another sad story you see all the time in places like Reddit goes like this: “I have X amount of work in a git repository, and I did this thing,..." />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://rec.github.io/">On computer programming</a></h1>
+                <nav><ul>
+                    <li><a href="https://rec.github.io/category/programming.html">Programming</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://rec.github.io/drafts/you-got-got-by-git-or-why-you-need-a-git-sandbox.html" rel="bookmark"
+           title="Permalink to You got got by Git!, or, why you need a Git sandbox">You got got by Git!, or, why you need a Git&nbsp;sandbox</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2023-03-03T14:26:37.450219+01:00">
+                Published: Fri 03 Mar 2023, 14:26 CET
+        </abbr>
+		<br />
+        <abbr class="modified" title="2023-03-03T14:26:37.450219+01:00">
+                Updated: Fri 03 Mar 2023, 14:26 CET
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://rec.github.io/author/tom-ritchford.html">Tom Ritchford</a>
+        </address>
+<p>In <a href="https://rec.github.io/category/git.html">Git</a>.</p>
+
+</footer><!-- /.post-info -->      <p>Another sad story you see all the time in places like Reddit goes like this: &#8220;I
+have X amount of work in a git repository, and I did this thing, and there was
+this error, and I kept going, and now all my work is&nbsp;gone!&#8221;</p>
+<p>Git is surprisingly good at not destroying your work, given half a chance, and a
+lot of the time people helping the victim can retrieve the data - but sometimes&nbsp;not.</p>
+<p>Git is a powerful program that lets you rearrange huge numbers of files in the
+blink of an eye and so it&#8217;s important to have a basic but solid understanding of
+how it&nbsp;works.</p>
+<p>People find version control stressful because you can lose work! It&#8217;s a very
+rational thing to be nervous about, and one part of the solution is a bit of
+practice in a safe space before you go under live&nbsp;fire.</p>
+<h2>The Git sandbox and the Git&nbsp;notebook</h2>
+<p>By the time your work is in Git and there is a problem, it is too late for
+trial and error with&nbsp;git.</p>
+<p>If you use Git, you should have at least one Git sandbox - a git repository with
+<em>fake</em> work in it, a repo with nothing to lose, a lot of branches and
+meaningless commits - a place for you to experiment with potentially destructive
+ideas like <code>git rebase</code> and <code>git reset --hard</code> and handling merge conflicts and
+all sorts of other things that are very stressful to experiment on with your
+actual&nbsp;work.</p>
+<p>And you should have a Git notebook - somewhere you write down your experiments
+as you go. What that &#8220;notebook&#8221; is exactly depends entirely on you. If you find
+Git fascinating and use it all the time, the notebook might be your own brain
+but most of us would get more use out of some sort of document, a physical
+notebook conceivably, a text file somwhere, some cloud document - somewhere
+useful to&nbsp;you.</p>
+<p>(Also, make sure to have a recent version of Git. Everything is perfectly
+backward compatible but there are some very useful features in later versions,
+particularly <code>git-switch</code> and <code>git-restore</code>, two commands which replace the one
+weird <code>git-checkout</code> command, which does too many things and is easy to wreak
+havoc&nbsp;with.)</p>
+<h2>How to play in your new&nbsp;sandbox</h2>
+<p>Instead of doing a little bit of everything, I strongly suggest digging a bit
+deeper into individual commands, a few at a&nbsp;time.</p>
+<p>Don&#8217;t get me wrong here - you probably won&#8217;t master any Git command in the first
+run through like this, but you might want to play with just a few toys at a time
+until you get the hang of&nbsp;them.</p>
+<p>You should always start with the <a href="https://git-scm.com/docs">man pages</a> when you
+are experimenting with a command.  Do not accept some simplified&nbsp;substitute.</p>
+<p>But don&#8217;t expect to master any of those man pages on the first, or the sixth,
+time you see them - don&#8217;t stress, look for what you need in the page, and don&#8217;t
+feel silly if you have to go over the pages multiple&nbsp;times.</p>
+<h2>When Git things go wrong in your work&nbsp;repo</h2>
+<p><span class="caps">STOP</span> and don&#8217;t change anything!  Consider duplicating the entire directory to
+have a backup in case you make things&nbsp;worse.</p>
+<p>Take the series of commands that got you into trouble, and take them to your
+sandbox.  Try to make the bad thing happen again, and then experiment with
+different ways to get out of&nbsp;it.</p>
+<p>Only once you are comfortable&nbsp;again</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="https://www.python.org/">Python.org</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://github.com/rec">github</a></li>
+                            <li><a href="https://toot.community/@TomSwirly">Mastodon</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
